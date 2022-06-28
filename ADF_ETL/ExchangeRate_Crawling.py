@@ -1,3 +1,7 @@
+# 사용할 패키지 경로 지정
+import sys
+sys.path.append('C:\\Users\\Bestc\\anaconda3\\Lib\\site-packages')
+
 # 필요 패키지 로드
 # RPA
 import time
@@ -7,9 +11,8 @@ from selenium.webdriver.common.by import By
 # Crawling
 import pandas as pd
 import requests
-from tqdm.notebook import tqdm
 from bs4 import BeautifulSoup
-from tqdm.notebook import tqdm # 반복문 실행시 실행도 확인용 라이브러리
+
 
 # 크롬 개발자 버전 에러 메세지 삭제
 options = webdriver.ChromeOptions()
