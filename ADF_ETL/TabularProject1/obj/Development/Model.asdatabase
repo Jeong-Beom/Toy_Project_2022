@@ -1,0 +1,194 @@
+{
+  "name": "TabularProject1",
+  "compatibilityLevel": 1500,
+  "model": {
+    "name": "모델",
+    "culture": "ko-KR",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/sqlserverttjb1519 database windows net;sql_db_tt_jb1519",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "sqlserverttjb1519.database.windows.net",
+            "database": "sql_db_tt_jb1519"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "Username": "jb1519",
+          "EncryptConnection": true
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "Exchange_rate_test",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "string",
+            "sourceColumn": "Date"
+          },
+          {
+            "name": "Currency",
+            "dataType": "string",
+            "sourceColumn": "Currency"
+          },
+          {
+            "name": "Exchange_rate",
+            "dataType": "double",
+            "sourceColumn": "Exchange_rate"
+          },
+          {
+            "name": "Day_to_day",
+            "dataType": "double",
+            "sourceColumn": "Day_to_day"
+          },
+          {
+            "name": "Rise_and_fall",
+            "dataType": "double",
+            "sourceColumn": "Rise_and_fall"
+          },
+          {
+            "name": "Buy",
+            "dataType": "double",
+            "sourceColumn": "Buy"
+          },
+          {
+            "name": "Sell",
+            "dataType": "double",
+            "sourceColumn": "Sell"
+          },
+          {
+            "name": "To_Transfer",
+            "dataType": "double",
+            "sourceColumn": "To_Transfer"
+          },
+          {
+            "name": "Receive",
+            "dataType": "double",
+            "sourceColumn": "Receive"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/sqlserverttjb1519 database windows net;sql_db_tt_jb1519\",",
+                "    dbo_Exchange_rate_test = Source{[Schema=\"dbo\",Item=\"Exchange_rate_test\"]}[Data]",
+                "in",
+                "    dbo_Exchange_rate_test"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TEST",
+            "expression": " 1"
+          }
+        ]
+      },
+      {
+        "name": "Exchange_rate_test_plus",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "string",
+            "sourceColumn": "Date"
+          },
+          {
+            "name": "Currency",
+            "dataType": "string",
+            "sourceColumn": "Currency"
+          },
+          {
+            "name": "Exchange_rate",
+            "dataType": "double",
+            "sourceColumn": "Exchange_rate"
+          },
+          {
+            "name": "Day_to_day",
+            "dataType": "double",
+            "sourceColumn": "Day_to_day"
+          },
+          {
+            "name": "Rise_and_fall",
+            "dataType": "double",
+            "sourceColumn": "Rise_and_fall"
+          },
+          {
+            "name": "Buy",
+            "dataType": "double",
+            "sourceColumn": "Buy"
+          },
+          {
+            "name": "Buy_Rise_and_fall",
+            "dataType": "double",
+            "sourceColumn": "Buy_Rise_and_fall"
+          },
+          {
+            "name": "Sell",
+            "dataType": "double",
+            "sourceColumn": "Sell"
+          },
+          {
+            "name": "Sell_Rise_and_fall",
+            "dataType": "double",
+            "sourceColumn": "Sell_Rise_and_fall"
+          },
+          {
+            "name": "To_Transfer",
+            "dataType": "double",
+            "sourceColumn": "To_Transfer"
+          },
+          {
+            "name": "To_Transfer_Rise_and_fall",
+            "dataType": "double",
+            "sourceColumn": "To_Transfer_Rise_and_fall"
+          },
+          {
+            "name": "Receive",
+            "dataType": "double",
+            "sourceColumn": "Receive"
+          },
+          {
+            "name": "Receive_Rise_and_fall",
+            "dataType": "double",
+            "sourceColumn": "Receive_Rise_and_fall"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/sqlserverttjb1519 database windows net;sql_db_tt_jb1519\",",
+                "    dbo_Exchange_rate_test_plus = Source{[Schema=\"dbo\",Item=\"Exchange_rate_test_plus\"]}[Data]",
+                "in",
+                "    dbo_Exchange_rate_test_plus"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "600"
+      }
+    ]
+  }
+}

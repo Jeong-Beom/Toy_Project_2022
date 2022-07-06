@@ -1,0 +1,7 @@
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\bin\Model.asdatabase
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\bin\Model.deploymenttargets
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\bin\Model.deploymentoptions
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\obj\Development\TabularProject1.smproj.CoreCompileInputs.cache
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\obj\Development\Model.asdatabase
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\obj\Development\Model.deploymentoptions
+C:\Workspace\python\Toy_Project_2022\ADF_ETL\TabularProject1\obj\Development\Model.deploymenttargets

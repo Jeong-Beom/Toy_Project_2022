@@ -10,8 +10,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 # Crawling
 import pandas as pd
-import requests
-from bs4 import BeautifulSoup
 
 
 # 크롬 개발자 버전 에러 메세지 삭제
